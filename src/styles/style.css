@@ -3,6 +3,16 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
+textarea:focus, input:focus{
+outline: none;
+}
+
+textarea:focus::placeholder, input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
 h2 {
     font-size: 40px;
     text-transform: uppercase;
@@ -21,6 +31,7 @@ h3 {
 .button {
     box-sizing: border-box;
     font-size: 16px;
+    font-weight: bold;
     color: #6c6c6c;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -37,11 +48,16 @@ p {
     color: #626262;
 }
 
-header {
+.header__main {
     background-color: #373c44;
     /*background-image: url(../images/cover.jpg);*/
     background-repeat: round;
     position: relative;
+}
+
+.header {
+    height: 110px;
+    background-color: #373c44;
 }
 
 .content {
@@ -192,11 +208,6 @@ nav {
     font-size: 26px;
     padding-left: 30px;
     padding-right: 30px;
-}
-
-.footer__form_text:focus::placeholder {
-    opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
 .footer__form_text::placeholder {

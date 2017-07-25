@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+    {% if typeOfHeader==1 %} <header class="header__main">
         <div class="content">
             <a href="index.html"><img src="./images/logo.png" alt="logo" class="logo"></a>
             <nav>
@@ -25,7 +25,7 @@
                         <li>About us</li>
                     </a>
                     /
-                    <a href="#" class="nav__item">
+                    <a href="portfolio.html" class="nav__item">
                         <li>Work</li>
                     </a>
                     /
@@ -41,7 +41,7 @@
                         <li>Careers</li>
                     </a>
                     /
-                    <a href="#" class="nav__item">
+                    <a href="contacts.html" class="nav__item">
                         <li>Contact</li>
                     </a>
                 </ul>
@@ -76,6 +76,42 @@
                 <img src="../images/next-arrow.png" alt="" class="slider__buttons_img">
             </div>
     </header>
+     {%else %} 
+    
+    <header class="header">
+        <div class="content">
+            <a href="index.html"><img src="./images/logo.png" alt="logo" class="logo"></a>
+            <nav>
+                <ul class="nav__menu">
+                    <a href="#" class="nav__item">
+                        <li>About us</li>
+                    </a>
+                    /
+                    <a href="portfolio.html" class="nav__item">
+                        <li>Work</li>
+                    </a>
+                    /
+                    <a href="#" class="nav__item">
+                        <li>Services</li>
+                    </a>
+                    /
+                    <a href="#" class="nav__item">
+                        <li>Blog</li>
+                    </a>
+                    /
+                    <a href="#" class="nav__item">
+                        <li>Careers</li>
+                    </a>
+                    /
+                    <a href="contacts.html" class="nav__item">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    {%endif%}
 
     {% block main %} {% endblock %}
 
@@ -90,22 +126,22 @@
             </form>
             <img src="./images/logo.png" alt="" class="footer__logo">
 
-            <ul class="footer__social">
-                <a href="" class="footer__social_tw">
+            <ul class="footer__social social">
+                <a href="" class="footer__social_tw social_tw">
                     <li><img src="./images/icon-twitter.png" alt="twitter"></li>
                 </a>
-                <a href="" class="footer__social_fb">
+                <a href="" class="footer__social_fb social_fb">
                     <li><img src="./images/icon-facebook.png" alt="facebook"></li>
                 </a>
 
-                <a href="" class="footer__social_pin">
+                <a href="" class="footer__social_pin social_pin">
                     <li><img src="./images/icon-pinterest.png" alt="pinterest"></li>
                 </a>
 
-                <a href="" class="footer__social_in">
+                <a href="" class="footer__social_in social_in">
                     <li><img src="./images/icon-linkedin.png" alt="linkedin"></li>
                 </a>
-                <a href="" class="footer__social_skype">
+                <a href="" class="footer__social_skype social_skype">
                     <li><img src="./images/icon-skype.png" alt="skype"></li>
                 </a>
             </ul>
